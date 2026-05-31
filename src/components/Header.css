@@ -1,0 +1,225 @@
+/* ===== Header ===== */
+.header {
+  background: linear-gradient(120deg, #1a237e 0%, #283593 45%, #1976d2 100%);
+  color: #fff;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 24px rgba(21, 101, 192, 0.35);
+  overflow: hidden;
+}
+
+.header-bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.header-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1.1rem 2.4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Avatar */
+.header-avatar {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #42a5f5, #1565c0);
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+.avatar-initials {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+/* Info block */
+.header-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.header-name {
+  font-size: 1.55rem;
+  font-weight: 800;
+  margin: 0 0 0.18rem;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-designation {
+  font-size: 0.97rem;
+  font-weight: 700;
+  margin: 0 0 0.12rem;
+  color: #90caf9;
+}
+
+.header-affiliation {
+  font-weight: 400;
+  font-size: 0.88rem;
+  color: #bbdefb;
+}
+
+.header-dept {
+  font-size: 0.88rem;
+  margin: 0 0 0.06rem;
+  color: #e3f2fd;
+}
+
+.header-inst {
+  font-size: 0.86rem;
+  margin: 0 0 0.55rem;
+  color: #b3cde8;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.45rem;
+}
+
+.header-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.contact-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 0.22rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: background 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.contact-chip:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.chip-icon {
+  font-size: 0.78rem;
+  opacity: 0.85;
+}
+
+.header-profile-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.profile-link-badge {
+  display: inline-block;
+  padding: 0.22rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.profile-link-badge:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.wos {
+  background: #e65100;
+  color: #fff;
+}
+
+.scopus {
+  background: #f57f17;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 0.85rem;
+    gap: 0.55rem;
+  }
+
+  .header-name {
+    font-size: 1rem;
+    white-space: normal;
+    line-height: 1.25;
+    margin-bottom: 0.12rem;
+  }
+
+  .header-designation {
+    font-size: 0.82rem;
+    margin-bottom: 0.08rem;
+  }
+
+  .header-affiliation {
+    font-size: 0.78rem;
+  }
+
+  .header-dept,
+  .header-inst {
+    font-size: 0.76rem;
+    margin-bottom: 0.04rem;
+  }
+
+  .header-avatar {
+    width: 46px;
+    height: 46px;
+    border-width: 2px;
+  }
+
+  .avatar-initials {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  .header-contact {
+    gap: 0.32rem;
+  }
+
+  .contact-chip {
+    font-size: 0.72rem;
+    padding: 0.16rem 0.5rem;
+  }
+
+  .chip-icon {
+    font-size: 0.68rem;
+  }
+
+  .header-profile-links {
+    gap: 0.35rem;
+  }
+
+  .profile-link-badge {
+    font-size: 0.7rem;
+    padding: 0.16rem 0.6rem;
+  }
+}
